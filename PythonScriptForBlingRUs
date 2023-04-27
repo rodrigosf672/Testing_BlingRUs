@@ -18,21 +18,17 @@ products = {
 # Input for the products the customer wants, quantities, and engraving messsages. Size is not considered since it is the same pricing rules for all products of all sizes
 def get_product_order():
     product_names = input("Enter the product names separated by commas: ").split(',')
-
     orders = []
     for product_name in product_names:
         product_name = product_name.strip()
         while product_name not in products:
             print(f"Invalid product name '{product_name}'. Please enter a valid product name.")
             product_name = input("Enter the product name: ")
-
         quantity = int(input(f"Enter the quantity for {product_name}: "))
         engraving_text = input(f"Enter the engraving text for {product_name} (use '/' to separate lines): ")
         engraving_lines = engraving_text.count('/') + 1
         engraving_characters = len(engraving_text.replace('/', ''))
-
         orders.append((product_name, quantity, engraving_characters, engraving_lines))
-
     return orders
 
 # engraving_cost is defined, along with the applicable rules based on characters, number of lines, and the product chosen by the customer
@@ -42,14 +38,11 @@ def engraving_cost(characters, lines, product_name):
         engraving_cost += 50
         if characters > 30:
             engraving_cost += ((characters - 31) // 10) * 50
-
     if lines > 1 and product_name != "The Twin":
         engraving_cost += (lines - 1) * 25
-
 # This was added after I realized that The Twin Towers product was behaving in the same way as The Twin, despite that not being clearly specified in the rules
     if lines > 1 and product_name != "The Twin Towers":
         engraving_cost += (lines - 1) * 25
-
     return engraving_cost
 
 # order_cost is defined and total_price, total_items, and total_engraving_price have values stored as 0 before we start the loop and if statement
@@ -62,7 +55,6 @@ def order_cost(orders):
         base_price = products[product_name]
         price_without_vat = base_price * quantity
         engraving_price = engraving_cost(engraving_characters, engraving_lines, product_name)
-
         total_price += price_without_vat
         total_items += quantity
         total_engraving_price += engraving_price * quantity
@@ -74,16 +66,12 @@ def order_cost(orders):
 # 5th product for free and 25% VAT
     total_price -= (total_items // 5) * base_price
     total_price_with_vat = total_price * 1.25  
-
     total_cost = total_price_with_vat + total_engraving_price
 
 # Free shipping if order is 250 SEK or above, otherwise 36 SEK per product
     if total_cost <= 250:
         total_cost += 36 * total_items
-
     return total_cost
-
-
 
 orders = get_product_order()
 total = order_cost(orders)
