@@ -15,4 +15,11 @@ The `get_product_order` function collects information on the products the custom
 - **Quantity**
 - **Engraving Text** (optional)
 
+### Step 2: Engraving Cost Calculation
+
+The `engraving_cost` function calculates the cost of engraving based on the number of characters and lines. Specific rules include:
+- A base cost of 50 SEK for engraving with more than 10 characters.
+- An additional 50 SEK for every 10 characters over 30.
+- Additional charges per line beyond the first, except for "The Twin" and "The Twin Towers."
+
 ---
