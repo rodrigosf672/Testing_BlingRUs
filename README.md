@@ -43,3 +43,10 @@ The function outputs the **total cost of the order** in SEK, inclusive of all ap
 3. The total cost will be displayed upon completion.
 
 --- 
+
+## Future Improvements
+
+This script can serve as a base for a more automated testing solution. By integrating it with Selenium WebDriver, it would be possible to:
+- Automatically input data into the Bling R Us website.
+- Test shopping cart functionalities.
+- Validate pricing and engraving calculations directly on the website.
