@@ -35,3 +35,11 @@ The `order_cost` function calculates the total cost of the order, which includes
 The function outputs the **total cost of the order** in SEK, inclusive of all applicable discounts, VAT, and shipping fees.
 
 ---
+
+## How to Use
+
+1. Run the script in a Python environment.
+2. Input the requested product names, quantities, and engraving messages when prompted.
+3. The total cost will be displayed upon completion.
+
+--- 
