@@ -22,4 +22,16 @@ The `engraving_cost` function calculates the cost of engraving based on the numb
 - An additional 50 SEK for every 10 characters over 30.
 - Additional charges per line beyond the first, except for "The Twin" and "The Twin Towers."
 
+### Step 3: Order Cost Calculation
+
+The `order_cost` function calculates the total cost of the order, which includes:
+1. **Base Price Calculation**: The base price for each product is multiplied by the quantity ordered.
+2. **Discounts**: 
+   - 10% discount on orders with more than 4 items.
+   - Every 5th product is free.
+3. **VAT**: A 25% VAT is applied to the subtotal.
+4. **Shipping**: Free shipping for orders above 250 SEK; otherwise, shipping is 36 SEK per product.
+
+The function outputs the **total cost of the order** in SEK, inclusive of all applicable discounts, VAT, and shipping fees.
+
 ---
