@@ -1,7 +1,7 @@
-# Testing_BlingRUs
+# Bling R Us Pricing and Engraving Calculator
 
-Challenge based on the following website: https://blingrus.azurewebsites.net. Challenge involved testing the pricing system of the website. 
+This Python script calculates the total cost of an order for Bling R Us, based on a set of products with predefined base prices, engraving specifications, discounts, VAT, and shipping rules. This draft version was created as a testing solution for the Bling R Us website’s pricing system, with the potential to be further developed for automated testing using Selenium WebDriver.
 
-This Python script is a draft that could be used to conduct testing on the Bling R Us website using Selenium. This is a very primitive version which intends to demonstrate that it is possible to provide the desired outputs for the website, based on the engraving and pricing rules provided. 
+## Challenge Context
 
-By performing modifications to this script and combining it with Selenium webdriver and other functions, it could be possible to automate the testing of the website and shopping cart functionalities.
+Challenge based on the [Bling R Us website](https://blingrus.azurewebsites.net), where pricing and engraving rules determine the final cost of customized products. This script was written to test the pricing logic accurately, adhering to the provided rules for each product.
